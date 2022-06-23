@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Project Title</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../static/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="../static/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="../static/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="../static/menu.js"></script>
+  <style>
+    .menu-index {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+  </style>
+</head>
+
+<body>
+<div class="menu-container"></div>
+  <div class="content-container">
+    <div class="content">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin">API12 - getProductByNumber:</h2>
+            <hr>
+            <p class="text text-center graph-titlgetProductByNumbere">
+               The product number of each product model in each supply center
+            </p>
+            <div class="custom-table-container center add-top-margin-small">
+              <table class="custom-table">
+                <thead>
+                  <tr class="bg-color-gray">
+                    <th>Supply_center and model </th>
+                    <th class="text-center">data</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for key, value in model_groupby_number.items %}
+                  <tr>
+                    <td>{{key}}</td>
+                    <td class="text-center">{{value}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>
